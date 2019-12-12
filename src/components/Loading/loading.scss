@@ -1,0 +1,18 @@
+@import '../../utilities/mixins'; 
+@import '../../utilities/variables';
+@import '../../utilities/extends';
+@import '../../utilities/keyframes.scss';
+
+.loading {
+    &-img {
+        margin: 5% auto;
+        border: 16px solid $light-grey;
+        border-radius: $br--round ;
+        border-top: 40px solid $strong-blue;
+        @include dim(220px, 220px);
+        animation: rotate 2s linear infinite;
+     }
+     &-message {
+        text-align: center;
+    }
+}

@@ -1,0 +1,77 @@
+// Center Objects
+%center {
+    @include flexbox($just: center, $align: center);
+    margin: 0 auto;
+}
+
+// Transition
+
+%trn {
+    opacity: .8;
+    transition: all $trns-duration linear;
+}
+
+// Mouseover
+
+%mouseover {
+    cursor: pointer;
+    &:hover {
+        opacity: .5;
+        @extend %trn;
+    }
+    &:focus {
+        opacity: 1;
+    }
+    &:active {
+        opacity: .8;
+    }
+}
+
+// Box Shadow
+
+%box-shadow {
+    box-shadow: 
+        13px 12px 15px 5px rgba(0,0,0,.3);
+}
+
+%box-shadow2 {
+    box-shadow: 
+        inset 0 11px 8px -10px #CCC;
+}
+
+%box-shadow3 {
+    box-shadow: 
+        inset 0 11px 8px -10px #CCC,
+        inset 0 11px 8px -10px #CCC;
+}
+
+// Button
+
+  %btn-style {
+    @extend %mouseover;
+    font-size: 13px;
+    font-weight: $font-weight--bold;
+    color: $white-smoke;
+    border-radius: $br--default;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    letter-spacing: $letter-space;
+    text-decoration: none;
+  }
+
+// Form Input Box
+
+%input-box-style {
+    border-radius: 8px 8px;
+    margin: 10px 0 20px 0;
+    outline: none;
+    transition: all $trns-duration;
+    border: none;
+    background-color: $light-grey;
+    &:hover {
+        background-color: $light-yellow;
+    }
+  }
+
+

@@ -1,0 +1,216 @@
+// ======================================
+//  Flexbox Settings
+// ======================================
+
+@mixin flexbox (
+    $disp: flex,
+    $dir: null,
+    $wrap: null,
+    $just: null,
+    $align: null,) {
+        display: $disp;
+        flex-direction: $dir;
+        flex-wrap: $wrap;
+        justify-content: $just;
+        align-items: $align;
+        @content;
+    }
+
+// ======================================
+//  Grid Settings
+// ======================================
+
+@mixin grid (
+    $disp: grid,
+    $gap: null,
+    $temp-col: null,
+    $temp-row: null,
+    $temp-area: null
+    ) {
+        display: $disp;
+        grid-gap: $gap;
+        grid-template-columns: $temp-col;
+        grid-template-rows: $temp-row; 
+        grid-template-areas: $temp-area;
+        @content; 
+    }
+
+// ======================================
+//  Rounded Elements
+// ======================================
+
+@mixin roundy(
+    $dim: null,
+    $br: null,
+    $bcolor: null) {
+        width: $dim;
+        height: $dim;
+        border-radius: $br;
+        background: $bcolor;
+        @content;
+    }
+
+// ======================================
+//  Dimension
+// ======================================
+
+@mixin dim(
+    $w: null,
+    $h: null,
+    $max-w: null,
+    $max-h: null) {
+        width: $w;
+        height: $h;
+        max-width: $max-w;
+        max-height: $max-h;
+        @content; 
+    }
+
+// ======================================
+//  Media Queries
+// ======================================
+
+@mixin mq($break) {
+    @if $break == 'small' {
+        @media (min-width: $break-s) and (max-width: $break-m) {
+            @content;
+        }
+    }
+    @else if $break == 'medium' {
+        @media (min-width: $break-m + 1) {
+            @content;
+        }
+    }
+    @else if $break == 'large' {
+        @media (min-width: $break-l) {
+            @content;
+        }
+    }
+    @else {
+        @error "No value could be retrieved for #{$break}";
+    }
+}
+
+// ======================================
+//  BEM Selectors
+// ======================================
+
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// ======================================
+//  Position Property
+// ======================================
+
+@mixin pos(
+    $pos: null,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null) {
+        position: $pos;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        @content;
+    }
+
+// ======================================
+//  Absolute Position Property
+// ======================================
+
+@mixin apos(
+    $pos: absolute,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null) {
+        position: $pos;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        @content;
+    }
+
+// ======================================
+//  Relative Position Property
+// ======================================
+
+@mixin rpos(
+    $pos: relative,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null) {
+        position: $pos;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        @content;
+    }
+
+    // ======================================
+//  Fixed Position Property
+// ======================================
+
+@mixin fpos(
+    $pos: fixed,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null) {
+        position: $pos;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        @content;
+    }
+
+  // ======================================
+  // Slanted effect
+  // ======================================
+
+  @mixin skewed {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 50px; 
+      position: absolute;
+      transform: skewY(-2deg);
+      @content;
+    }
+  }
+
+  // ======================================
+  // Landing Page Background
+  // ======================================
+
+  @mixin background ($url) {
+    // background: linear-gradient($color-bg-light, $color-bg),
+    background: url($url);
+    // background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+} 
+
+@mixin lin-gradient-cloud($deg) {
+    background: linear-gradient($deg, rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0))
+}

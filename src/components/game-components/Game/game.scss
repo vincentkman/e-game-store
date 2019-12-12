@@ -1,0 +1,47 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/variables';
+@import '../../../utilities/extends';
+
+.all-games {
+    &-container {
+        @extend %center;
+    }
+    &-item {
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .overlay {
+                background: $light-black;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+        &-detail {
+            padding-top: 30px;
+            font-weight: $font-weight--bold;
+            text-align: center;
+             span {
+                 color: $red;
+                }
+            }
+        &-img {
+            width: 400px;
+        }
+        &-overlay {
+            @include apos($right: 0);
+            @include dim(62%, 100%);
+            transition: all .8s;
+            @extend %center;
+            border-radius: $br--default;
+            &-icon {
+                background: $red;
+                color: $white-smoke;
+                border-radius: $br--default;
+                font-size: 30px;
+                margin: 20px;
+                padding: 10px;
+            }
+        }
+    }
+}

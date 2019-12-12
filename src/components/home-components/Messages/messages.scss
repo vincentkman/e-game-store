@@ -1,0 +1,24 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/variables';
+@import '../../../utilities/extends';
+
+.messages {
+    padding: 80px 0;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+        @include mq('medium') {
+            @include grid($gap: 50px, $temp-col: repeat(3, 1fr));
+            width: 90%;
+        }
+        &-item {
+            padding: 20px;
+            &-icon {
+            color: $strong-blue;
+            font-size: 45px;
+        }
+        &-title {
+            padding: 20px;
+        }
+    }
+}

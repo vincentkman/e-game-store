@@ -1,0 +1,36 @@
+@import '../../utilities/mixins.scss';
+@import '../../utilities/variables.scss';
+@import '../../utilities/extends.scss';
+
+.game-info {
+    &-detail {
+        padding: 50px;
+        @include mq('medium') {
+            @include grid($temp-col: repeat(3, 1fr));
+        }
+        &-img {
+            width: 400px;
+            @include mq('medium') {
+                width: 600px;
+            }
+        }
+        &-box {
+            padding: 60px;
+            @include mq('medium') {
+                width: 700px;
+            }
+            &-price {
+                padding: 20px 0 10px 0;
+                span {
+                    color: $red;
+                }
+            }
+            &-btn {
+               @include flexbox();
+               &-items {
+                   margin-left: 20px;
+                }
+            }
+        }
+    }
+}

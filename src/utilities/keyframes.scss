@@ -1,0 +1,41 @@
+@keyframes text {
+    0% {
+        color: white;
+    }
+    30% {
+        letter-spacing: 8px;
+    }
+    85% {
+        letter-spacing: 3px;
+    }
+}
+
+@keyframes text2 {
+    0% {
+        color: white;
+    }
+    30% {
+        letter-spacing: 2px;
+    }
+    85% {
+        letter-spacing: 1px;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

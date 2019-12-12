@@ -1,0 +1,99 @@
+
+// =======================================
+//   Variables
+// =======================================
+
+// Fonts
+$font-url               : 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900';
+$font-stack             : 'Roboto', sans-serif;
+
+// Font Weights
+$font-weight--thin      : 100;
+$font-weight--light     : 300;
+$font-weight--medium    : 500;
+$font-weight--bold      : 700;
+$font-weight--ultra     : 900;
+
+// Descriptive Base Colors 
+$white          : #fff;
+$black          : #0b0b0b;
+$grey           : #eee;
+$blue           : #4682B4;
+$emerald        : #79EBD1;
+$orange         : #e54d26;
+$purple         : #563d7c;
+$sky-blue       : #55acee;
+$green          : #B2D57C;
+$red            : #ff005b;
+$pink           : #CD6799;
+$yellow         : #F7DF1D;
+$soft-red       : #D68C8B;
+
+$light-black    : rgba(0, 0, 0, .8);
+$light-red      : rgba(255, 0, 0, .8);;
+$light-orange   : #ff4800;
+$light-blue     : rgb(35, 236, 250);
+$light-purple   : #DCB3EE;
+$light-grey     :#e8eaed;
+$light-mulberry : #E1B1EF;
+$light-yellow   : #FFF8DC;
+$light-green    : #B1D57D;
+
+$dark-grey      : #bbbbbb;
+$dark-blue      : #3b5998;
+$dark-purple    : #4B4D72;
+$dark-grey      : #888888;
+$sea-green      : #20B2AA;
+$floral-white   : #eae9e1;
+$white-smoke    : #F0F0F0;
+$strong-blue    : #007bb5;
+
+// Color Usage
+
+$color-primary        : $emerald;
+$color-primary-light  : lighten($color-primary, 15%);
+$color-secondary      : $light-blue;
+$color-accent         : $emerald;
+$color-shadow         : rgba($black, .2);
+$color-bg             : #3acec2;
+$color-bg-light       : #009fe1;
+
+// Color Pallette Modifiers
+
+$palettes: (
+  grey: (
+  xx-light : lighten($grey, 43%),
+  x-light  : lighten($grey, 35%),
+  light    : lighten($grey, 12%),
+  base     : $grey,
+  dark     : darken($grey, 8%),
+  x-dark   : darken($grey, 16%)
+  ),
+  black: (
+  light    : lighten($black, 10%),
+  base     : $black,
+  dark     : darken($black, 10%)
+  )
+);
+
+// Text
+$base__font-size   : 40px;
+$base__line        : 24px;
+$letter-space      : 2px;
+
+// Border Radius
+$br--default       : 5px;
+$br--round         : 50%;
+
+// Transitions
+$trns-duration     : .5s;
+$trn: all $trns-duration linear;
+
+// Layout
+$max-width: 1050px;
+$gutter: 10px;
+
+// Breakpoints
+$break-s: 1px;
+$break-m: 768px;
+$break-l: 1024px;

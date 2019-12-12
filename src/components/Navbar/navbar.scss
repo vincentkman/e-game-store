@@ -1,0 +1,62 @@
+@import '../../utilities/mixins'; 
+@import '../../utilities/variables';
+@import '../../utilities/extends';
+
+.navbar {
+    @include fpos($top: 0);
+    width: 100%; 
+    z-index: 1000;
+    background: $light-red;
+    &-main {
+        z-index: 10;
+        width: 100%;
+        &-icon {
+            color: $light-blue;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 40px;
+            &-gamepad {
+                @include mq('medium') {
+                    display: none;
+                }
+            }
+        }
+        &-logo {
+            @include apos($top: 20px);
+            width: 220px;
+        }
+    }
+    &-links {
+        list-style-type: none;
+        text-align: center;
+        height: 0;
+        overflow: hidden;
+        transition: $trn; 
+        @include mq('medium') {
+            padding-top: 60px;
+            @include flexbox($just: space-evenly, $align: center);
+            height: 210px;
+        }
+        &-item {
+            font-size: 20px;
+            font-weight: $font-weight--bold;
+            color: $white;
+            transition: $trn; 
+            &:hover {
+                color: $light-blue;
+                text-decoration: none;
+            }
+            @include mq('medium') {
+                display: block;
+            }
+        }        
+    }
+}
+
+.nav-active {
+    color: $light-blue; 
+}
+
+.show-nav {
+    height: 210px;
+}

@@ -1,0 +1,12 @@
+@import '../../utilities/mixins.scss';
+@import '../../utilities/variables.scss';
+@import '../../utilities/extends.scss';
+
+.not-found {
+    &-landing-page {
+        @include background($url: '../images/background/luigi2.png');
+    }
+    button {
+        @extend %btn-style;
+    }
+}

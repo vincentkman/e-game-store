@@ -1,0 +1,9 @@
+@import '../../utilities/mixins.scss';
+@import '../../utilities/variables.scss';
+@import '../../utilities/extends.scss';
+
+.trolley {
+    &-landing-page {
+        @include background($url: '../images/background/supermario.jpg');
+    }
+}

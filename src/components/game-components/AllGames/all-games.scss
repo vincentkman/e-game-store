@@ -1,0 +1,8 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/variables';
+@import '../../../utilities/extends';
+
+.all-games {
+    padding: 50px;
+    @include grid($gap: 20px, $temp-col: repeat(auto-fit, minmax(400px, 1fr)));
+}

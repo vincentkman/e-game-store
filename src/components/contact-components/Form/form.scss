@@ -1,0 +1,29 @@
+@import '../../../utilities/mixins.scss';
+@import '../../../utilities/variables.scss';
+@import '../../../utilities/extends.scss';
+
+.contact {
+    &-search-input {
+        @include flexbox($just: center, $align: center);
+        label {
+            font-weight: $font-weight--medium;
+        }
+        &-box {
+            @extend %input-box-style;
+            width: 100%;
+            padding: 15px;
+        }
+        &-btn {
+            @extend %btn-style;
+            padding: 10px 200px;
+            color: $white-smoke;
+        }
+    }
+}
+
+::placeholder {
+    text-align: right;
+    font-style: italic;
+    font-weight: $font-weight--light;
+    padding-right: 15px;
+  }

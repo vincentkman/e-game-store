@@ -1,0 +1,20 @@
+@import '../../utilities/mixins.scss';
+@import '../../utilities/variables.scss';
+@import '../../utilities/extends.scss';
+
+.about {
+    &-landing-page {
+        @include background($url: '../images/background/supermario.jpg');
+    }
+    &-detail {
+        min-height: 40vh;
+        font-size: 50px;
+        letter-spacing: $letter-space;
+        p {
+            font-size: 20px;
+        }
+        &-container {
+            margin: 20px 10px;
+        }
+    }
+}
