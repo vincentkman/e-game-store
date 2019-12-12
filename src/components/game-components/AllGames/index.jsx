@@ -5,7 +5,6 @@ import GameItems from '../GameItems';
 import Loading from '../../Loading';
 
 function AllGames() {
-    // console.log(useContext(GameContext));
     const { loading, games } = useContext(GameContext);
     return loading ? 
         <Loading/> : 
