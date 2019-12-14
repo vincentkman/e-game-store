@@ -28,7 +28,7 @@ function App() {
                 <Route path='/about' component={About} />
                 <Route path='/trolley' component={Trolley} />
                 <Route path='/contact' component={Contact} />
-              <Route exact={true} path='/games' component={Games} />
+                <Route exact={true} path='/games' component={Games} />
                 <Route path='/games/:id' component={GameInfo} />
                 <Route component={NotFound} />
               </Switch>

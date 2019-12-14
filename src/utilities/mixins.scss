@@ -203,12 +203,15 @@
   @mixin background ($url) {
     // background: linear-gradient($color-bg-light, $color-bg),
     background: url($url);
-    // background-size: contain;
-    background-size: cover;
+    background-size: contain;
+    // background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     background-blend-mode: multiply;
     background-attachment: fixed;
+    @include mq('medium') {
+        background-size: cover;
+    }
 } 
 
 @mixin lin-gradient-cloud($deg) {

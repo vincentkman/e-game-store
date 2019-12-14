@@ -9,9 +9,13 @@
     @include flexbox($just: center, $align: center);
     &-inner {
         background: $light-black;
-        padding: 60px 100px;
+        padding: 10px 50px;
+        margin-top: 100px;
         letter-spacing: $letter-space;
         border-radius: $br--default;
+        @include mq('medium') {
+            padding: 60px 100px;
+        }
         &-item {
             color: $white-smoke;
             font-size: 50px;
