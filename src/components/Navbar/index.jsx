@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { GameContext } from '../../context';
-import logo from '../../images/logo.png';
+import { GameContext } from '../../context/game';
+import { TrolleyContext } from '../../context/trolley';
+import Logo from '../../images/logo.png';
 import { NavLink, Link } from 'react-router-dom';
 import './navbar.scss';
 
@@ -14,6 +15,7 @@ const NavbarLink = ({ route, title, icon }) => {
 
 function Navbar() {
     const { navbarOpen, navbarToggler } = useContext(GameContext);
+    const { trolleyItems } = useContext(TrolleyContext);
     return (
         <>
             <nav className='navbar'>
@@ -25,7 +27,7 @@ function Navbar() {
                         />
                         <Link to='/'>
                             <img
-                                src={logo} alt="main logo"
+                                src={Logo} alt="main logo"
                                 className='navbar-main-logo'
                             />
                         </Link>
@@ -35,11 +37,19 @@ function Navbar() {
                             <li><NavbarLink route='/' title='HOME' /></li>
                             <li><NavbarLink route='/about' title='ABOUT' /></li>
                             <li><NavbarLink route='/games' title='GAMES' /></li>
-                            <li><NavbarLink route='/trolley' title='TROLLEY' /></li>
-                            <li><NavbarLink route='/checkout' title='CHECKOUT' /></li>
                             <li><NavbarLink route='/contact' title='CONTACT' /></li>
-                            <li><NavbarLink route='/login' title='LOGIN' /></li>
+                            <li><NavbarLink route='/trolley' title='TROLLEY' /></li>
                         </ul>
+                        <div className="navbar-main-trolley">
+                            <Link to='/trolley'>
+                                <i className="fas fa-cart-arrow-down navbar-main-icon navbar-main-icon-basket icon" />
+                                <div className="navbar-main-trolley-item">
+
+                                    {trolleyItems}
+
+                                </div>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -48,3 +58,59 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+// import React, { useState } from 'react';
+// import Logo from '../../images/logo.png';
+// import {
+//   Collapse,
+//   Navbar,
+//   NavbarToggler,
+//   NavbarBrand,
+//   Nav,
+//   NavItem,
+//   NavLink,
+// } from 'reactstrap';
+// import './navbar.scss';
+
+// const Example = (props) => {
+//   const [isOpen, setIsOpen] = useState(false);
+
+//   const toggle = () => setIsOpen(!isOpen);
+
+//   return (
+//     <div>
+//        <Navbar className='navbar default' color="transparent" light expand="md">
+//       <NavbarBrand href="/"><img src={Logo} alt='logo' className='navbar-logo' /></NavbarBrand>
+//         <NavbarToggler onClick={toggle} />
+//         <Collapse isOpen={isOpen} navbar>
+//           <Nav className="mr-auto" navbar>
+//             <NavItem>
+//               <NavLink href="/">HOME</NavLink>
+//             </NavItem>
+//             <NavItem>
+//               <NavLink href="/about/">ABOUT</NavLink>
+//             </NavItem>
+//             <NavItem>
+//               <NavLink href="/games">GAMES</NavLink>
+//             </NavItem>
+//             <NavItem>
+//               <NavLink href="/trolley">TROLLEY</NavLink>
+//             </NavItem>
+//             <NavItem>
+//               <NavLink href="/checkout">CHECKOUT</NavLink>
+//             </NavItem>
+//             <NavItem>
+//               <NavLink href="/contact">CONTACT</NavLink>
+//             </NavItem>
+//             <NavItem>
+//               <NavLink href="/login">LOGIN</NavLink>
+//             </NavItem>
+//           </Nav>
+//         </Collapse>
+//       </Navbar>
+//     </div>
+//   );
+// }
+
+// export default Example;

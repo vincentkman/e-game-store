@@ -1,0 +1,53 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/variables';
+@import '../../../utilities/extends';
+
+.trolley-item {
+    text-align: center;
+    @include mq('medium') {
+        @include flexbox($just: space-evenly);
+    }
+    i {
+        color: $strong-blue;
+        padding: 0 5px;
+    }
+    &-img-size {
+        width: 100px;
+        // margin-right: 60px;
+    }
+    &-title {
+        // margin-right: 150px;
+        // text-align: center;
+        @include mq('medium') {
+            width: 5%;
+        }
+    }
+}
+
+@include mq('medium') {
+    .trolley-item-img {
+        @include rpos($left: -15px);
+    }
+    .trolley-item-title {
+        @include rpos($top: -10px, $left: -35px);
+        padding: 10px 0;
+    }     
+    .trolley-item-price {
+        @include rpos($top: 10px, $right: 25px);
+        @include mq('large') {
+            @include rpos($top: 10px, $right: 30px);
+        }
+    }  
+    .trolley-item-qty {
+        @include rpos($top: 10px, $right: 50px);
+        @include mq('large') {
+            @include rpos($top: 10px, $right: 40px);
+        }
+    }
+    .trolley-item-remove {
+        @include rpos($top: 10px, $right: 40px);
+    }
+    .trolley-item-total {
+        @include rpos($top: 10px, $right: 10px);
+    }
+}

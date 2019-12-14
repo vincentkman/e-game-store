@@ -25,6 +25,19 @@
             @include apos($top: 20px);
             width: 220px;
         }
+        &-trolley {
+            // position: relative;
+            @include apos($top: 10px, $right: 0);
+            &-item {
+                @include apos($top: 25px, $right: 25px);
+                font-size: 20px;
+                font-weight: $font-weight--bold;
+                color: $strong-blue;
+                background: $green;
+                border-radius: $br--round;
+                padding: 0 8px;
+            }
+        }
     }
     &-links {
         list-style-type: none;
@@ -35,7 +48,7 @@
         @include mq('medium') {
             padding-top: 60px;
             @include flexbox($just: space-evenly, $align: center);
-            height: 210px;
+            height: 145px;
         }
         &-item {
             font-size: 20px;
@@ -58,5 +71,51 @@
 }
 
 .show-nav {
-    height: 210px;
+    height: 145px;
 }
+
+// @import '../../utilities/mixins.scss';
+// @import '../../utilities/variables.scss';
+// @import '../../utilities/extends.scss';
+
+// .navbar.default {
+//         @include lin-gradient-cloud(60deg);
+//         // background-color: $light-red;; 
+//         width: 100%;
+//         z-index: 1000;
+//         position: fixed;
+//         text-align: center;
+//         @include mq('medium') {
+//             @include lin-gradient-cloud(10deg);
+//         }
+//         .navbar {   
+//             &-logo {
+//                 width: 250px;
+//             } 
+//             &-item {
+//                 margin-left: 10px;
+//                 margin-right: 10px;
+//             }
+//             &-link {
+//                 font-weight: bold;
+//                 letter-spacing: 1x;
+//                 font-size: 18px;
+//                 outline: none;
+//             }
+//             &-toggler {
+//                 outline: none;
+//             }
+//         }
+//     }
+    
+//     #link {
+//      &:active {
+//          color: white;
+//      }
+//      &:hover {
+//         color: black;
+//      }
+//      &:focus {
+//          color:black;
+//      }   
+//     }

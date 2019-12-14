@@ -1,23 +1,29 @@
 import React from 'react';
+// import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+// import { TrolleyContext } from '../../../context/trolley';
 import './game.scss';
 
 function Game({ id, images, title, price }) {
+    const [landingPageImg, gameImg] = images;
     return (
         <div>
             <div className='all-games-container'>
                 <div className="all-games-item">
-                    <img src={images[1]} alt="item" className='all-games-item-img img' />
+                    <img src={gameImg} alt="item" className='all-games-item-img img' />
                     <div className='all-games-item-overlay overlay'>
                         <Link
                             to={`/games/${id}`}
                         >
                             <i className="fas fa-search all-games-item-overlay-icon icon"></i>
                         </Link>
-                        <i
+                        {/* <i
                             className="fas fa-cart-plus all-games-item-overlay-icon icon"
+                            onClick={() => {
+                                increase(id)
+                            }}
                         >
-                        </i>
+                        </i> */}
                     </div>
                 </div>
             </div>

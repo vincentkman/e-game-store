@@ -1,0 +1,13 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/variables';
+@import '../../../utilities/extends';
+
+.trolley-total {
+    text-align: center;
+    &-btn {
+        margin-bottom: 25px;
+    }
+    &-section {
+        @include grid($gap: 10px);
+    }
+}
