@@ -3,7 +3,7 @@ export const games = [
     id: "luigis-mansion",
     title: "Luigi's Mansion 3",
     description: "Luigi embarks on a dream vacation with Mario and friends upon receiving an invitation to a luxurious hotel. However, his dream quickly becomes a nightmare when King Boo reveals everything had been a ploy to capture Mario and friends. With the assistance of Professor E. Gadd once again, the reluctant and cowardly hero Luigi traverses up and down treacherous floors of the now-ominous hotel on a quest to save them.",
-    price: 44.99,
+    price: 43.99,
     images: [
       "https://doc-0s-14-docs.googleusercontent.com/docs/securesc/rde3cuc4c7qun8mnicarm7544phhl0p5/sellavtm62o7p9bhqec7imh9qmriku2s/1576080000000/12872940121170678101/12872940121170678101/1iqqhlW-J7aQ_D-wLvRjleFUvz8Yl5tpC?authuser=0",
       "https://doc-0s-14-docs.googleusercontent.com/docs/securesc/rde3cuc4c7qun8mnicarm7544phhl0p5/8elk2njlia5vual62ted8424i88c6816/1576101600000/12872940121170678101/12872940121170678101/1Bl1iVC2VawVQfHu_0Afjc2HifkoIheNX?authuser=0"
