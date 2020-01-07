@@ -14,7 +14,7 @@ export const games = [
     id: "super-smash-bros",
     title: "Super Smash Bros - Ultimate",
     description: "Gaming icons clash in the ultimate brawl you can play anytime, anywhere! Smash rivals off the stage as new characters Simon Belmont and King K. Rool join Inkling, Ridley, and every fighter in Super Smash Bros. history. Enjoy enhanced speed and combat at new stages based on the Castlevania series, Super Mario Odyssey, and more!",
-    price: 44.99,
+    price: 43.99,
     images: [
       "https://doc-00-14-docs.googleusercontent.com/docs/securesc/rde3cuc4c7qun8mnicarm7544phhl0p5/iocbtplujop07crea7sm7c0i04lhdkrj/1576080000000/12872940121170678101/12872940121170678101/1u6WjmQDATTeXxEz76QFcn6eIudT175LS?authuser=0",
       "https://doc-14-14-docs.googleusercontent.com/docs/securesc/rde3cuc4c7qun8mnicarm7544phhl0p5/dl17mdhbpq0437plmge7837dc0aeqi70/1576101600000/12872940121170678101/12872940121170678101/1TOWC8uQeVZ0z4VjiapGgicg-yT1mRfcK?authuser=0"
