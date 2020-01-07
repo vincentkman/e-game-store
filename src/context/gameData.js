@@ -25,7 +25,7 @@ export const games = [
     id: "zelda-breath-of-the-wild",
     title: "The Legend of Zelda: Breath of the Wild",
     description: "This epic open-world game is a new take on Nintendo's iconic fantasy series. You are Link, and your homeland of Hyrule is in ruins. Your quest is to discover the cause of the destruction and bring life back to the land.",
-    price: 44.99,
+    price: 43.99,
     images: [
       "https://doc-0s-14-docs.googleusercontent.com/docs/securesc/rde3cuc4c7qun8mnicarm7544phhl0p5/vd6nr3e48e8nkg2polseg1vsrh1j8gdv/1576080000000/12872940121170678101/12872940121170678101/1SyyN2K-HdB_pXMPnDEj7iK4ep28ib1tK?authuser=0",
       "https://doc-10-14-docs.googleusercontent.com/docs/securesc/rde3cuc4c7qun8mnicarm7544phhl0p5/v9nmg8uj7l10otsfsa5tqbqjcthal0ui/1576101600000/12872940121170678101/12872940121170678101/1ynPQcxbP4Scmwx1p4jvq3ruscueKTiBe?authuser=0"
