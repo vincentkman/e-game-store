@@ -36,7 +36,7 @@ export const games = [
     id: "pokemon",
     title: "Pokemon: Let's Go, Pikachu!",
     description: "In this reimagining of Pokemon Yellow, you will start off as a new trainer in the Kanto region, with 150 Pokemon to discover and catch. Your starter Pokemon will be Pikachu, and it can ride on your shoulder during your journey.",
-    price: 44.99,
+    price: 43.99,
     images: [
       "https://doc-04-14-docs.googleusercontent.com/docs/securesc/rde3cuc4c7qun8mnicarm7544phhl0p5/9to72p880avthije5gf71jfghlbl1o9e/1576080000000/12872940121170678101/12872940121170678101/1J5PB6pBgnkg3OFuJlHJFgPor3QeFG2lg?authuser=0",
       "https://doc-04-14-docs.googleusercontent.com/docs/securesc/rde3cuc4c7qun8mnicarm7544phhl0p5/hdmtng8elbtg7sikua21n6ogri00mj21/1576101600000/12872940121170678101/12872940121170678101/1SO4_CggKQzy8_-qSpiuhXQAoaOwUpq3x?authuser=0"
