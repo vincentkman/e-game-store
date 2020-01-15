@@ -1,6 +1,6 @@
 import React from 'react';
 import LandingPage from '../../components/LandingPage';
-import { Jumbotron } from 'reactstrap'
+import { Jumbotron } from 'reactstrap';
 import './about.scss';
 
 function About() {
